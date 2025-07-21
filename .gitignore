@@ -1,0 +1,84 @@
+# Archivos temporales y de editor
+~*
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Archivos binarios y datos
+*.parquet
+*.joblib
+*.png
+*.jpg
+*.jpeg
+*.db
+*.pdf
+*.docx
+*.xlsx
+
+# Entornos virtuales
+venv/
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Resultados y checkpoints
+results/
+TFGModels/checkpoints/
+TFGModels/results/
+TFGSintetico/dataset_rul_variable_ENRIQUECIDO/
+
+# Python y caché
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE y herramientas
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs y outputs
+*.log
+*.out
+*.pid
+*.gz
+*.csv
+*.tsv
+
+# Archivos de configuración local
+local_settings.py

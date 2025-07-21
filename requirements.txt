@@ -1,0 +1,28 @@
+# TFGModels dependencies (Machine Learning Core)
+numpy==2.2.6
+pandas==2.3.0
+scikit-learn==1.6.1
+xgboost==3.0.2
+lightgbm==4.6.0
+shap==0.48.0
+joblib==1.5.1
+scipy==1.15.3
+imbalanced-learn==0.13.0
+
+# TFGSintetico dependencies (Data Generation)
+pyarrow==20.0.0
+fastparquet==2024.11.0
+SQLAlchemy==2.0.41
+
+# Streamlit Platform dependencies
+streamlit==1.46.1
+streamlit-shap==1.0.2
+matplotlib==3.10.3
+seaborn==0.13.2
+plotly==6.2.0
+
+# Common utilities
+psutil==7.0.0
+
+# Development/testing (optional)
+pytest==8.4.1
