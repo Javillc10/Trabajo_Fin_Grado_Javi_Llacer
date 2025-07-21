@@ -20,7 +20,7 @@ def run_generator(generator_type: str, hours: int):
     if not TFG_SINTETICO_PATH: return None
     st.session_state.is_generating = True
     
-    module_name = "Generador_enriquezido" if generator_type == 'enriquezido' else "Generador_database"
+    module_name = "Generador_enriquecido" if generator_type == 'enriquecido' else "Generador_database"
     command = [sys.executable, "-m", module_name, f"--total-hours={hours}"]
     
     st.info(f"Ejecutando desde el directorio: `{TFG_SINTETICO_PATH}`")
@@ -37,7 +37,7 @@ def run_generator(generator_type: str, hours: int):
                 log_area.text_area("Log de Generación", "".join(log_content), height=300)
         if process.wait() == 0:
             st.success("¡Generación completada!")
-            output_dir = TFG_SINTETICO_PATH / ('dataset_rul_variable_ENRIQUECIDO' if generator_type == 'enriquezido' else 'dataset_rul_variable_DEFINITIVO')
+            output_dir = TFG_SINTETICO_PATH / ('dataset_rul_variable_ENRIQUECIDO' if generator_type == 'enriquecido' else 'dataset_rul_variable_DEFINITIVO')
             latest_file = max(output_dir.glob('*.parquet'), key=os.path.getctime)
             return pd.read_parquet(latest_file)
         else:
@@ -58,7 +58,7 @@ if 'is_generating' not in st.session_state: st.session_state.is_generating = Fal
 
 with st.container(border=True):
     st.subheader("Configuración del Generador")
-    generator_type = st.radio("Tipo de Generador:", ['enriquezido', 'database'], captions=["Ideal para ENTRENAR (más fallos).", "Ideal para VALIDAR (realista)."], horizontal=True)
+    generator_type = st.radio("Tipo de Generador:", ['enriquecido', 'database'], captions=["Ideal para ENTRENAR (más fallos).", "Ideal para VALIDAR (realista)."], horizontal=True)
     total_hours = st.slider("Horas de simulación a generar:", 1, 100, 10)
 
 if st.button("🚀 Iniciar Generación", type="primary", disabled=st.session_state.is_generating, use_container_width=True):

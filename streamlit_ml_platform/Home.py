@@ -43,7 +43,7 @@ with st.container(border=True):
             """
             Todo empieza con los datos. En este panel, puedes crear datasets sintéticos a medida.
             
-            - **Tu Control:** Ajusta el tipo de generador (`enriquezido` para entrenar, `database` para validar) y el volumen de datos (horas de simulación).
+            - **Tu Control:** Ajusta el tipo de generador (`enriquecido` para entrenar, `database` para validar) y el volumen de datos (horas de simulación).
             - **Acción:** Navega a la página **`1_🔬_Generación_de_Datos`** desde el menú lateral para empezar.
             """
         )
@@ -84,4 +84,3 @@ with st.container(border=True):
 
 st.divider()
 st.success("¡Todo listo! Ya puedes empezar a explorar el pipeline completo usando el menú de la izquierda.")
-
